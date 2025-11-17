@@ -36,7 +36,6 @@ export class AppComponent implements OnInit, OnDestroy {
         items => items.filter(item => item.name.includes(value.toLowerCase().trim()))
       ))  
     ));
-
   }
 
   applyFilter($event: any) {
@@ -88,8 +87,6 @@ export class AppComponent implements OnInit, OnDestroy {
   toggle(element: GroceryItem) {
     this.expandedId = this.isExpanded(element) ? undefined : element.id;
   }
-
-
 
   updateCount(row: GroceryItem, delta: number, $event: MouseEvent) {
     $event.stopPropagation();

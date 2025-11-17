@@ -54,4 +54,4 @@ Backend has full integration tests with 100% coverage which can be ran by runnin
 
 This will build a docker container and run the backend tests there.
 
-Unfortunately, due to time constraints, there was no opportunity to write full front end unit tests and e2e tests using both systems.
+Unfortunately, due to time constraints, there was no opportunity to polish the front end tests or to make e2e tests.

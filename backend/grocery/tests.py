@@ -93,7 +93,7 @@ class GroceryItemDetailTests(TestCase):
             "created": update_date
         }, content_type='application/json')
         self.assertEqual(response.data["count"], 3)
-        self.assertNotEqual(response.data["creacreatedted_at"], update_date)
+        self.assertNotEqual(response.data["created"], update_date)
 
     def test_update_bad_request(self):
         response = self.client.post(reverse("grocery:index"), data={
