@@ -1,0 +1,12 @@
+<div *ngIf="getControl() as control">
+    <div *ngIf="control.dirty">
+        <mat-error *ngIf="control?.errors?.['required']">This field is required</mat-error>
+        <mat-error *ngIf="control?.errors?.['minlength']">Min Length of {{control?.errors?.['minlength'].requiredLength}} is required</mat-error>
+        <mat-error *ngIf="control?.errors?.['maxlength']">Max Length of {{control?.errors?.['maxlength'].requiredLength}} is required</mat-error>
+
+        <!-- number -->
+        <mat-error *ngIf="control?.errors?.['min']">Field must be at least {{control?.errors?.['min'].min}}</mat-error>
+        <mat-error *ngIf="control?.errors?.['max']">Field must be at most {{control?.errors?.['max'].max}}</mat-error>
+
+    </div>
+</div>

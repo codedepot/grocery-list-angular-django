@@ -1,0 +1,52 @@
+<mat-expansion-panel [expanded]="expanded" (opened)="toggleExpand(true)" (closed)="toggleExpand(false)">
+  <mat-expansion-panel-header>
+    <mat-panel-title>Add Item</mat-panel-title>
+  </mat-expansion-panel-header>
+    <form [formGroup]="addItemForm">
+        <div class="field-wrapper">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input
+                    matInput
+                    placeholder="Pizza"
+                    formControlName="name"
+                    required
+                    />
+                <app-field-error [group]="addItemForm" controlName="name"></app-field-error>
+            </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+            <mat-form-field>
+                <mat-label>Count</mat-label>
+                <input
+                    matInput
+                    type="number"
+                    placeholder="1"
+                    formControlName="count"
+                    required
+                    />
+                <app-field-error [group]="addItemForm" controlName="count"></app-field-error>
+            </mat-form-field>
+        </div>
+
+        
+        <div class="field-wrapper">
+            <mat-button-toggle-group
+                name="priority"
+                aria-label="Priority"
+                formControlName="priority"
+                hideSingleSelectionIndicator="true"
+            >
+                <mat-button-toggle [value]="0">Low</mat-button-toggle>
+                <mat-button-toggle [value]="1">Medium</mat-button-toggle>
+                <mat-button-toggle [value]="2">High</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+
+        <div class="button-wrapper">
+            <button matButton="filled" [disabled]="addItemForm.invalid" (click)="submit()">Add</button>
+        </div>
+        
+    </form>
+</mat-expansion-panel>

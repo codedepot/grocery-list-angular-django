@@ -1,0 +1,43 @@
+
+:host {
+  width: 100%;
+  display: block;
+}
+
+.expand-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    button {
+        padding: 5px 15px;
+    }
+}
+
+ button {
+    max-width: 200px;
+}
+
+@media (max-width: 767px) {
+     .button-wrapper {
+        width: 100%;
+        .mat-form-field {
+            width: 100%;
+        }
+    }
+    .button-wrapper button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+textarea {
+    min-height: 100px;
+}
