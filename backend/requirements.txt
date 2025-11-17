@@ -1,0 +1,10 @@
+coverage
+Django
+psycopg2-binary
+gunicorn 
+python-dotenv  
+django-cors-headers
+#testing
+coverage
+pytest-django
+pytest
