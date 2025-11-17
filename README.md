@@ -14,6 +14,7 @@ To bring up the app, simply run:
 ```
 docker-compose up --build -d
 ```
+then visit localhost/ (it may take a few seconds for it to come up)
 
 ## Features
 
