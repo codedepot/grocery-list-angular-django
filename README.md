@@ -1,5 +1,7 @@
 # Grocery List App
 
+![Screenshot](/screen-shot.PNG "Screenshot")
+
 A simple grocery list app made with python django rest backend and angular front end. This is a POC, the roadmap is discussed in `DISCUSSION.md`
 
 
