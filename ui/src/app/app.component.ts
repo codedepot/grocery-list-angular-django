@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
     // triggered by filter$ and filters items$
     this.filteredItems$ = this.filter$.pipe(switchMap(value => 
       this.items$.pipe(map(
-        items => items.filter(item => item.name.includes(value.toLowerCase().trim()))
+        items => items.filter(item => item.name.toLowerCase().trim().includes(value.toLowerCase().trim()))
       ))  
     ));
   }
