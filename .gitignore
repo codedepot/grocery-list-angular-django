@@ -1,0 +1,2 @@
+# Usually .env would not be commited, but for the sake of ease of use and the fact that this is a POC, it will be committed.
+#.env
